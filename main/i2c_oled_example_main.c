@@ -29,10 +29,9 @@ static const char *TAG = "example";
 #define EXAMPLE_I2C_HW_ADDR           0x2C
 
 #define DATA_LENGTH 100
-char dara_wr[DATA_LENGTH] = "Hello World!";
+uint8_t data_wr[DATA_LENGTH] = "Hello World!";
 void app_main(void)
 {
-    ESP_LOGI(TAG, "Initialize I2C bus");
     i2c_master_bus_config_t i2c_mst_config = {
         .clk_source = I2C_CLK_SRC_DEFAULT,
         .i2c_port = I2C_BUS_PORT,
